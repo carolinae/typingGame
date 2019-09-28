@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WordBeater</title>
+</head>
+<body class="bg-dark text-white">
+
+    <header class="bg-secondary text-center p-3 mb-5">
+        <h1>WordBeater</h1>
+    </header>
+    <div class="container text-center">
+        <h1>New Game?</h1>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        <div id="chooseDif">
+            <h2> Choose the difficulty of the game</h2>
+            <select id="difficulty" class="form-control form-control-lg" style="width: 200px;">
+              <option value="">--Make a choice--</option>
+              <option value="easy">easy</option>
+              <option value="medium">medium</option>
+              <option value="hard">hard</option>
+            </select>
+            <button id="startGame">Start</button>
+        </div>
+    </div>
+    <div class="container text-center" id="mainGame">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <p class="load">
+                    <span class="text-success" id="seconds">5</span> Seconds:</p>
+                <h2 class="display-2 mb-5" id="current-word">hello!</h2>
+                <input type="text" class="form-control form-control-lg" placeholder="Start typying..." id="word-input" autofocus>
+                <h4 class="mt-3" id="message"></h4>
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <h3> Time Left:
+                            <span id="time">0</span>
+                            score:
+                            <span id="score">0</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="card card-body bg-secondary text-white">
+                            <h5>Instructions</h5>
+                            <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will reset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/main.js"></script>
+
+
+</body>
+</html>
